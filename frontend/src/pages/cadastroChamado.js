@@ -55,7 +55,7 @@ const CadastroChamado = () => {
                         <div>
 
 
-                            <h2 className="mb-4 mt-0">Cadastro Pacientes</h2>
+                            <h2 className="mb-4 mt-0">Cadastro Chamado</h2>
                             <form method='POST' className='formulario'>
                                 <label>Titulo:</label>
                                 <input
