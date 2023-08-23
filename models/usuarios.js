@@ -22,4 +22,5 @@ Usuario.init({
 });
 
 
+
 module.exports = Usuario;

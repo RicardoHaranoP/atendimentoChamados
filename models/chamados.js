@@ -24,6 +24,8 @@ Chamado.init({
     dataSolucao: {
         type: DataTypes.DATE,
     }
+        
+ 
 }, {
     sequelize,
     modelName: 'Chamado'

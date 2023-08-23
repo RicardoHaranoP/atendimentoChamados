@@ -13,5 +13,15 @@ class UsuarioController {
         res.status(500).json({ error: 'Erro ao criar Usuario' });
       }
     }
+
+    async listUsuarios(req, res){
+      try{
+        const listaUsuarios = await Usuario.findAll ();
+        res.status(201).json(listaUsuarios)
+      } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Erro ao listar Usuarios' });
+      }
+  }
   }
 module.exports = new UsuarioController();

@@ -14,4 +14,5 @@ Situacao.init({
 });
 
 
+
 module.exports = Situacao;

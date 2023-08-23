@@ -13,5 +13,15 @@ class CategoriaController {
         res.status(500).json({ error: 'Erro ao criar Categoria.' });
       }
     }
+
+    async listCategoria(req, res){
+      try{
+        const listaCategoria = await Categoria.findAll ();
+        res.status(201).json(listaCategoria)
+      } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Erro ao listar Categorias' });
+      }
   }
+}
 module.exports = new CategoriaController();

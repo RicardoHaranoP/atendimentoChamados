@@ -13,5 +13,15 @@ class SituacaoController {
         res.status(500).json({ error: 'Erro ao criar Situacao.' });
       }
     }
+
+    async listSituacao(req, res){
+      try{
+        const listaSituacao = await Situacao.findAll ();
+        res.status(201).json(listaSituacao)
+      } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Erro ao listar Situacaos' });
+      }
+  }
   }
 module.exports = new SituacaoController();
